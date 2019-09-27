@@ -1,0 +1,62 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-09-26 16:30:32
+ * @LastEditTime: 2019-09-27 10:50:52
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>snow</title>
+	<style>
+
+		body {
+			margin: 0;
+		}
+        #canvas{
+        	
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+    <script src="./drop.js"></script>
+    <script>
+    	var canvasDrop =  {
+    		id: "canvas",
+    		type: "rain",  // drop类型，有rain or snow
+            speed : [0.4,2.5], //速度范围
+            size_range: [0.5,1.5],//大小半径范围
+            hasBounce: true, //是否有反弹效果or false,
+            wind_direction: -105, //角度
+            hasGravity: true,//是否有重力考虑
+            numLevel: 10,
+    		maxNum: 100
+    	}
+ 
+    	init(canvasDrop);
+        update();
+        
+    	// var canvasDrop =  {
+    	// 	id: "canvas",
+    	// 	type: "snow",  // drop类型，有rain or snow
+        //     speed : [0.4,2.5], //速度范围
+        //     size_range: [0.5,1.5],//大小半径范围
+        //     hasBounce: false, //是否有反弹效果or false,
+        //     wind_direction: -105, //角度
+        //     hasGravity: false,//是否有重力考虑
+        //     numLevel: 10,
+    	// 	maxNum: 100
+    	// }
+ 
+    	// init(canvasDrop);
+    	// update();
+   
+    </script>
+</body>
+</html>
